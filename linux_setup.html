@@ -1,0 +1,30 @@
+<h2><strong>Helix account setup:</strong></h2>
+<p>Here is how to setup your helix account:</p>
+<p>Requires:</p>
+<ul>
+<li>NIH account</li>
+<li><a href="https://hpc.nih.gov/docs/accounts.html">HPC account</a></li>
+<li>NX client properly&nbsp;<a href="https://hpc.nih.gov/docs/connect.html">setup</a>
+<ul>
+<li>(under persistent connections NX)</li>
+</ul>
+</li>
+</ul>
+<p>Instructions:</p>
+<ol>
+<li>start NX</li>
+<li>edit your .bashrc file
+<ul>
+<li>open a terminal</li>
+<li>type nano .bashrc</li>
+</ul>
+</li>
+<li>add the following lines to the end of the file
+<pre style="margin: 0; line-height: 125%;"><span style="color: #888888;"># Source ETPB definitions</span>
+<span style="color: #008800; font-weight: bold;">if</span> <span style="color: #333333;">[</span> -f /data/MoodGroup/IRTA/etpb_bashrc <span style="color: #333333;">]</span>; <span style="color: #008800; font-weight: bold;">then</span>
+        . /data/MoodGroup/IRTA/etpb_bashrc
+<span style="color: #008800; font-weight: bold;">fi</span>
+</pre>
+</li>
+<li>close the terminal and start a new one, you're all set!</li>
+</ol>
