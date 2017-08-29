@@ -120,15 +120,43 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="http://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/encryption</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki</li>
 
 <li>$:/config/TextEditor/EnableToolbar</li>
 
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions</li>
+
 <li>$:/core</li>
+
+<li>$:/core/ui/SideBar/More</li>
+
+<li>$:/core/ui/SideBar/Open</li>
+
+<li>$:/core/ui/SideBar/Recent</li>
+
+<li>$:/core/ui/SideBar/Tools</li>
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
+
+<li>$:/plugins/tongerner/ro</li>
+
+<li>$:/plugins/tongerner/ro/publish-button</li>
+
+<li>$:/plugins/tongerner/ro/sidebar-button-style</li>
 
 <li>$:/SiteSubtitle</li>
 
@@ -140,11 +168,15 @@ Error message and password prompt
 
 <li>$:/state/tab--2112689675</li>
 
+<li>$:/state/tab--876492898</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
 
 <li>$:/state/tab/sidebar--1835078512</li>
+
+<li>$:/state/tabs/controlpanel/toolbars--1837375673</li>
 
 <li>$:/StoryList</li>
 
@@ -178,11 +210,29 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20170829190448931" modified="20170829190448931" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<pre>hide</pre>
+</div>
 <div created="20170825205538545" modified="20170825210630290" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/encryption">
+<pre>hide</pre>
+</div>
+<div created="20170829190447874" modified="20170829190447874" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
+<pre>hide</pre>
+</div>
+<div created="20170829190451506" modified="20170829190451506" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki">
 <pre>hide</pre>
 </div>
 <div created="20170825205400656" modified="20170825205404958" title="$:/config/TextEditor/EnableToolbar">
 <pre>yes</pre>
+</div>
+<div created="20170829190445505" modified="20170829190445505" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/close">
+<pre>hide</pre>
+</div>
+<div created="20170829190444322" modified="20170829190444322" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
+<pre>hide</pre>
+</div>
+<div created="20170829190443365" modified="20170829190443365" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions">
+<pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.14">
 <pre>{
@@ -8381,6 +8431,76 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div caption="{{$:/language/SideBar/More/Caption}}" created="20170829190456591" modified="20170829190507530" tags="$:/tags/hide" title="$:/core/ui/SideBar/More">
+<pre>&lt;div class=&quot;tc-more-sidebar&quot;&gt;
+&lt;&lt;tabs &quot;[all[shadows+tiddlers]tag[$:/tags/MoreSideBar]!has[draft.of]]&quot; &quot;$:/core/ui/MoreSideBar/Tags&quot; &quot;$:/state/tab/moresidebar&quot; &quot;tc-vertical&quot;&gt;&gt;
+&lt;/div&gt;
+</pre>
+</div>
+<div caption="{{$:/language/SideBar/Open/Caption}}" created="20170829190503573" modified="20170829190506003" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/Open">
+<pre>\define lingo-base() $:/language/CloseAll/
+
+\define drop-actions()
+&lt;$action-listops $tiddler=&quot;$:/StoryList&quot; $subfilter=&quot;+[insertbefore:currentTiddler&lt;actionTiddler&gt;]&quot;/&gt;
+\end
+
+&lt;$list filter=&quot;[list[$:/StoryList]]&quot; history=&quot;$:/HistoryList&quot; storyview=&quot;pop&quot;&gt;
+&lt;div style=&quot;position: relative;&quot;&gt;
+&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;
+&lt;div class=&quot;tc-droppable-placeholder&quot;&gt;
+&amp;nbsp;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;$button message=&quot;tm-close-tiddler&quot; tooltip={{$:/language/Buttons/Close/Hint}} aria-label={{$:/language/Buttons/Close/Caption}} class=&quot;tc-btn-invisible tc-btn-mini&quot;&gt;&amp;times;&lt;/$button&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;
+&lt;/div&gt;
+&lt;/$droppable&gt;
+&lt;/div&gt;
+&lt;/$list&gt;
+&lt;$tiddler tiddler=&quot;&quot;&gt;
+&lt;$droppable actions=&lt;&lt;drop-actions&gt;&gt;&gt;
+&lt;div class=&quot;tc-droppable-placeholder&quot;&gt;
+&amp;nbsp;
+&lt;/div&gt;
+&lt;$button message=&quot;tm-close-all-tiddlers&quot; class=&quot;tc-btn-invisible tc-btn-mini&quot;&gt;&lt;&lt;lingo Button&gt;&gt;&lt;/$button&gt;
+&lt;/$droppable&gt;
+&lt;/$tiddler&gt;
+</pre>
+</div>
+<div caption="{{$:/language/SideBar/Recent/Caption}}" created="20170829190459931" modified="20170829190501844" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/Recent">
+<pre>&lt;$macrocall $name=&quot;timeline&quot; format={{$:/language/RecentChanges/DateFormat}}/&gt;
+</pre>
+</div>
+<div caption="{{$:/language/SideBar/Tools/Caption}}" created="20170829190457656" modified="20170829190508902" tags="$:/tags/hide" title="$:/core/ui/SideBar/Tools">
+<pre>\define lingo-base() $:/language/ControlPanel/
+\define config-title()
+$:/config/PageControlButtons/Visibility/$(listItem)$
+\end
+
+&lt;&lt;lingo Basics/Version/Prompt&gt;&gt; &lt;&lt;version&gt;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-icons&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-text&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-class&quot; value=&quot;&quot;&gt;
+
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
+
+&lt;div style=&quot;position:relative;&quot;&gt;
+
+&lt;$checkbox tiddler=&lt;&lt;config-title&gt;&gt; field=&quot;text&quot; checked=&quot;show&quot; unchecked=&quot;hide&quot; default=&quot;show&quot;/&gt; &lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt; &lt;i class=&quot;tc-muted&quot;&gt;&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; field=&quot;description&quot;/&gt;&lt;/i&gt;
+
+&lt;/div&gt;
+
+&lt;/$list&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+</pre>
+</div>
 <div created="20170825200625166" modified="20170825210328604" title="$:/DefaultTiddlers">
 <pre>'Welcome to ETPB wiki'
 'Getting Started'
@@ -8389,8 +8509,180 @@ Error message and password prompt
 
 </pre>
 </div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[$:/plugins/tongerner/ro]]</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
+</div>
+<div author="TonGerner" core-version="5.1.14" created="20140716185113624" creator="TonGerner" description="Read-only" list="readme help" modified="20170507151626478" modifier="TonGerner" plugin-type="plugin" source="http://tongerner.tiddlyspot.com/" title="$:/plugins/tongerner/ro" type="application/json" version="0.1.11">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/tongerner/ro/publish&quot;: {
+            &quot;text&quot;: &quot;&lt;&lt;tabs \&quot;$:/plugins/tongerner/ro/help $:/plugins/tongerner/ro/hide-toolbar-buttons $:/plugins/tongerner/ro/hide-sidebar-tabs  $:/plugins/tongerner/ro/hide-sidebar-buttons $:/plugins/tongerner/ro/change-settings $:/plugins/tongerner/ro/save\&quot; \&quot;Help\&quot;&gt;&gt;\n\n\n\n\n\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/publish&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20161108104831551&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20140715185723459&quot;,
+            &quot;caption&quot;: &quot;Publish&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/image-save-button&quot;: {
+            &quot;created&quot;: &quot;20140715185836189&quot;,
+            &quot;text&quot;: &quot;&lt;svg class=\&quot;tgc-image-save-button tc-image-button\&quot; viewBox=\&quot;0 0 128 128\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot;&gt;\n    &lt;g fill-rule=\&quot;evenodd\&quot;&gt;\n        &lt;path d=\&quot;M120.78304,34.329058 C125.424287,43.1924006 128.049406,53.2778608 128.049406,63.9764502 C128.049406,99.3226742 99.3956295,127.97645 64.0494055,127.97645 C28.7031816,127.97645 0.0494055385,99.3226742 0.0494055385,63.9764502 C0.0494055385,28.6302262 28.7031816,-0.0235498012 64.0494055,-0.0235498012 C82.8568763,-0.0235498012 99.769563,8.08898558 111.479045,21.0056358 L114.159581,18.3250998 C117.289194,15.1954866 122.356036,15.1939641 125.480231,18.3181584 C128.598068,21.4359957 128.601317,26.5107804 125.473289,29.6388083 L120.78304,34.329058 Z M108.72451,46.3875877 C110.870571,51.8341374 112.049406,57.767628 112.049406,63.9764502 C112.049406,90.4861182 90.5590735,111.97645 64.0494055,111.97645 C37.5397375,111.97645 16.0494055,90.4861182 16.0494055,63.9764502 C16.0494055,37.4667822 37.5397375,15.9764502 64.0494055,15.9764502 C78.438886,15.9764502 91.3495036,22.308215 100.147097,32.3375836 L58.9411255,73.5435552 L41.975581,56.5780107 C38.8486152,53.4510448 33.7746915,53.4551552 30.6568542,56.5729924 C27.5326599,59.6971868 27.5372202,64.7670668 30.6618725,67.8917192 L53.279253,90.5090997 C54.8435723,92.073419 56.8951519,92.8541315 58.9380216,92.8558261 C60.987971,92.8559239 63.0389578,92.0731398 64.6049211,90.5071765 L108.72451,46.3875877 Z\&quot;&gt;&lt;/path&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20160407160605840&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/image-save-button&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/readme&quot;: {
+            &quot;created&quot;: &quot;20140821172500339&quot;,
+            &quot;text&quot;: &quot;A plugin to make ~TiddlyWiki read-only.\n\nYou can hide:\n\n* ''All'' toolbar buttons\n* 'Sidebar' button (to switch Sidebar) and 'Advanced search' button (next to Search)\n* ''All'' Sidebar tabs, even user added tabs.\n\nClick the Publish button {{$:/plugins/tongerner/ro/images/publish}} next to the sidebar button {{$:/core/images/chevron-left}}/{{$:/core/images/chevron-right}} to start making your TW 'publish-ready'.  A new window with four tabs opens. Follow the 5 steps.\n\n&lt;&lt;&lt;\n''Note:''\n\n* [[$:/plugins/tongerner/ro/publish]] is also available as a tab in $:/ControlPanel (''$:/ControlPanel &gt; Appearance &gt; Publish'')\n* @@.RED Although you can hide the 'Sidebar' and 'Advanced Search' button, they remain 'active'!@@\n* @@.RED When in readonly mode@@, search in ''~AdvancedSearch'', tab ''Shadows'' for ''~ControlPanel'' to have access to:\n** ''$:/ControlPanel &gt; Appearance &gt; Publish'' to recover tabs, unhide buttons, ...\n&lt;&lt;&lt;\n\n       &quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20170507114216540&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/readme&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/icon&quot;: {
+            &quot;created&quot;: &quot;20170322100000766&quot;,
+            &quot;text&quot;: &quot;&lt;svg width=\&quot;99.212598\&quot; height=\&quot;99.212598\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; xmlns:svg=\&quot;http://www.w3.org/2000/svg\&quot;&gt;\n\n &lt;metadata id=\&quot;metadata7\&quot;&gt;image/svg+xml&lt;/metadata&gt;\n &lt;g&gt;\n  &lt;title&gt;Layer 1&lt;/title&gt;\n  &lt;g id=\&quot;layer1\&quot;&gt;\n   &lt;path fill=\&quot;#a0a0ff\&quot; stroke=\&quot;#a0a0ff\&quot; stroke-width=\&quot;1.2218\&quot; stroke-miterlimit=\&quot;4\&quot; id=\&quot;path4142\&quot; d=\&quot;m48.98237,97.8691l-41.98313,-24.239l0,-48.47796l41.98313,-24.23897l41.98313,24.23897l0,48.47796l-41.98313,24.239z\&quot;/&gt;\n   &lt;g id=\&quot;g4657\&quot; transform=\&quot;matrix(2.9000748,0,0,2.9000748,17.560041,968.58207) \&quot;&gt;\n    &lt;path fill=\&quot;#000000\&quot; stroke=\&quot;null\&quot; id=\&quot;editor_pencil_pen_edit_write_glyph\&quot; d=\&quot;m2.40166,-313.82635l4.72483,4.70973l10.79962,-10.7651l-4.72483,-4.70973l-10.79962,10.7651zm13.51982,-13.47661l-1.99364,1.98727l4.72409,4.70899l1.99364,-1.98727c0.6766,-0.67444 -0.00001,-1.34889 -0.00001,-1.34889l-3.37088,-3.3601c0,0 -0.6766,-0.67444 -1.3532,0zm-14.18411,14.11637l-0.99229,5.72125l5.7273,-1.00138l-4.735,-4.71987l-0.00001,0z\&quot;/&gt;\n    &lt;rect transform=\&quot;matrix(0.69825835,0.71584585,-0.71584585,0.69825835,11.119094,-4.6050809) \&quot; id=\&quot;svg_1\&quot; height=\&quot;2.10315\&quot; width=\&quot;26.11743\&quot; y=\&quot;-219.65699\&quot; x=\&quot;-237.30928\&quot; stroke-linecap=\&quot;null\&quot; stroke-linejoin=\&quot;null\&quot; stroke-width=\&quot;null\&quot;/&gt;\n   &lt;/g&gt;\n  &lt;/g&gt;\n &lt;/g&gt;\n&lt;/svg&gt;&quot;,
+            &quot;modified&quot;: &quot;20170322100230047&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/icon&quot;,
+            &quot;type&quot;: &quot;image/svg+xml&quot;,
+            &quot;tags&quot;: &quot;&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/help&quot;: {
+            &quot;text&quot;: &quot;!! Help\n\nBefore you 'publish' your ~TiddlyWiki:\n\n# Make a backup of your wiki\n# Get a defined start-up situation for your TW:\n#* Define your starting tiddler(s) in [[$:/DefaultTiddlers]]\n#* If required, define the state of the sidebar tabs\n# Follow the procedure given in the following tabs (1 - 5).\n\n&lt;&lt;&lt;\n''Note:''\n\n* @@.RED When in readonly mode@@, search in ''~AdvancedSearch'', tab ''Shadows'' for ''~ControlPanel'' to have access to:\n** ''$:/ControlPanel &gt; Appearance &gt; Publish'' to recover tabs, unhide buttons, ...\n&lt;&lt;&lt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/help&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20161108104959079&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20140716184603499&quot;,
+            &quot;caption&quot;: &quot;Help&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/save-button&quot;: {
+            &quot;text&quot;: &quot;&lt;$button message=\&quot;tm-save-wiki\&quot; param={{$:/config/SaveWikiButton/Template}}&gt;\n&lt;span class=\&quot;tc-dirty-indicator\&quot;&gt;\n{{$:/plugins/tongerner/ro/image-save-button}}\n&lt;/span&gt;\n&lt;/$button&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/save-button&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20170506164338685&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20170405200808621&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/styles&quot;: {
+            &quot;created&quot;: &quot;20161104132710834&quot;,
+            &quot;text&quot;: &quot;/* Slider style */\n\nhtml .tgc-slider {\n     color: #5778D8;\n     font-weight: bold;\n}\n\n.tgc-slider:hover {\n     color: #5778D8;\n     text-decoration: underline;\n}\n\n.RED {\n     color: red;\n     font-weight: bold;\n}&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/styles&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;modified&quot;: &quot;20161104133819357&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/change-settings&quot;: {
+            &quot;created&quot;: &quot;20161108100322449&quot;,
+            &quot;text&quot;: &quot;!!4) Settings\nTo customise the behaviour of TiddlyWiki\n\n{{$:/snippets/viewswitcher}}\n{{$:/plugins/tongerner/ro/sidebar-layout}}\n{{$:/core/ui/ControlPanel/Settings}}\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/change-settings&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20170307110923964&quot;,
+            &quot;caption&quot;: &quot;4. Settings&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/hide-sidebar-buttons&quot;: {
+            &quot;created&quot;: &quot;20161108100124814&quot;,
+            &quot;text&quot;: &quot;!! Hide Sidebar, Advanced search and Publish buttons\n\n!!!3a Sidebar button ({{$:/core/images/chevron-left}}/{{$:/core/images/chevron-right}})\n \n&lt;$list filter=\&quot;[all[shadows]!has[draft.of]tag[$:/tags/sidebar-button]!tag[$:/tags/Stylesheet]]\&quot;&gt;\n&lt;$checkbox tag=\&quot;$:/tags/Stylesheet\&quot;&gt;&amp;nbsp;&amp;nbsp;Check for 'invisible' buttons&lt;/$checkbox&gt;&lt;/$list&gt;\n&lt;$list filter=\&quot;[all[shadows]!has[draft.of]tag[$:/tags/sidebar-button]tag[$:/tags/Stylesheet]]\&quot;&gt;\n&lt;$checkbox tag=\&quot;$:/tags/Stylesheet\&quot;&gt;&amp;nbsp;&amp;nbsp;Uncheck for visible buttons&lt;/$checkbox&gt;&lt;/$list&gt;\n\n!!!3b Advanced search button ({{$:/core/images/advanced-search-button}})\n\n&lt;$list filter=\&quot;[all[shadows]!has[draft.of]tag[$:/tags/advanced-search-button]!tag[$:/tags/Stylesheet]]\&quot;&gt;\n&lt;$checkbox tag=\&quot;$:/tags/Stylesheet\&quot;&gt;&amp;nbsp;&amp;nbsp;Check for 'invisible' buttons&lt;/$checkbox&gt;&lt;/$list&gt;\n&lt;$list filter=\&quot;[all[shadows]!has[draft.of]tag[$:/tags/advanced-search-button]tag[$:/tags/Stylesheet]]\&quot;&gt;\n&lt;$checkbox tag=\&quot;$:/tags/Stylesheet\&quot;&gt;&amp;nbsp;&amp;nbsp;Check for invisible buttons&lt;/$checkbox&gt;&lt;/$list&gt;\n\n&lt;&lt;&lt;\n''Note:''&lt;br&gt;Although 'invisible' (`display:none;`), Sidebar and Advanced search buttons stay active!\n&lt;&lt;&lt;\n\n!!!3c Publish button ({{$:/plugins/tongerner/ro/images/publish}})\n\n&lt;$list filter=\&quot;[all[shadows]!has[draft.of]tag[$:/tags/publish-button]!tag[$:/tags/TopRightBar]]\&quot;&gt;\n&lt;$checkbox invertTag=yes tag=\&quot;$:/tags/TopRightBar\&quot;&gt;&amp;nbsp;&amp;nbsp;Uncheck for visible button&lt;/$checkbox&gt;&lt;/$list&gt;\n\n&lt;$list filter=\&quot;[all[shadows]!has[draft.of]tag[$:/tags/publish-button]tag[$:/tags/TopRightBar]]\&quot;&gt;\n&lt;$checkbox invertTag=yes tag=\&quot;$:/tags/TopRightBar\&quot;&gt;&amp;nbsp;&amp;nbsp;Check for unvisible button&lt;/$checkbox&gt;&lt;/$list&gt;\n\n&lt;&lt;&lt;\n''Note:''&lt;br&gt;Publish button invisible and inactive (`$:/tags/TopRightBar` removed)\n&lt;&lt;&lt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/hide-sidebar-buttons&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20170507113724230&quot;,
+            &quot;caption&quot;: &quot;3. Sidebar buttons&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/hide-sidebar-tabs&quot;: {
+            &quot;text&quot;: &quot;!! Hide sidebar tabs\n\nHiding tabs in the Sidebar is a 2-step procedure:&lt;br&gt;\n&amp;nbsp;&amp;nbsp;2a) Add the tag `$:/tags/hide` to tabs you want to manipulate.&lt;br&gt;\n&amp;nbsp;&amp;nbsp;2b)  Remove the tag `$:/tags/SideBar` from the tab you want to hide.\n\n!!!2a) Add tag `$:/tags/hide`\nCheck the following for adding `$:/tags/hide`\n&lt;$list filter=\&quot;[all[shadows+tiddlers]!has[draft.of]tag[$:/tags/SideBar]!tag[$:/tags/hide]sort[title]]\&quot;&gt;&lt;br&gt;\n&lt;$checkbox tag=\&quot;$:/tags/hide\&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=\&quot;title\&quot;/&gt;\n&lt;/$link&gt;\n&lt;/$checkbox&gt;\n&lt;/$list&gt;\n\nUncheck the following for removing `$:/tags/hide`\n&lt;$list filter=\&quot;[all[shadows+tiddlers]!has[draft.of]tag[$:/tags/SideBar]tag[$:/tags/hide]sort[title]]\&quot;&gt;&lt;br&gt;\n&lt;$checkbox tag=\&quot;$:/tags/hide\&quot;&gt; &lt;$link to={{!!title}}&gt;&lt;$view field=\&quot;title\&quot;/&gt;\n&lt;/$link&gt;\n&lt;/$checkbox&gt;\n&lt;/$list&gt;\n\n!!!2b) Hide 'tabs in Sidebar'\n&lt;$list filter=\&quot;[all[shadows+tiddlers]!has[draft.of]tag[$:/tags/hide]!tag[$:/tags/SideBar]sort[title]]\&quot;&gt;&lt;br&gt;\n&lt;$checkbox tag=\&quot;$:/tags/SideBar\&quot;&gt;&amp;nbsp;&amp;nbsp;Check to show &lt;$link to={{!!title}}&gt;&lt;$view field=\&quot;title\&quot;/&gt;\n&lt;/$link&gt;\n&lt;/$checkbox&gt;\n&lt;/$list&gt;\n&lt;$list filter=\&quot;[all[shadows+tiddlers]!has[draft.of]tag[$:/tags/hide]tag[$:/tags/SideBar]sort[title]]\&quot;&gt;&lt;br&gt;\n&lt;$checkbox tag=\&quot;$:/tags/SideBar\&quot;&gt;&amp;nbsp;&amp;nbsp;Uncheck to hide &lt;$link to={{!!title}}&gt;&lt;$view field=\&quot;title\&quot;/&gt;\n&lt;/$link&gt;\n&lt;/$checkbox&gt;\n&lt;/$list&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/hide-sidebar-tabs&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20161108104312650&quot;,
+            &quot;created&quot;: &quot;20161108100017749&quot;,
+            &quot;caption&quot;: &quot;2. Tabs&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/hide-toolbar-buttons&quot;: {
+            &quot;text&quot;: &quot;!! Hide toolbar buttons\n\nDisable in Control panel (Appearance &gt; Toolbars) the buttons you do not need in read-only mode.\n\n''//Disable at least the following buttons://''\n\n* ~ViewToolbar\n** Edit button {{$:/core/images/edit-button}}\n** More button {{$:/core/images/down-arrow}}\n** Info button {{$:/core/images/info-button}} (Tools tab contains button configuration!)\n* Page control buttons\n** New tiddler button {{$:/core/images/new-button}}\n** Control panel button {{$:/core/images/options-button}}\n** Save button {{$:/core/images/save-button}}\n** More button {{$:/core/images/down-arrow}}\n\n{{$:/core/ui/ControlPanel/Toolbars}}&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/hide-toolbar-buttons&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20161108104232014&quot;,
+            &quot;created&quot;: &quot;20161108095713019&quot;,
+            &quot;caption&quot;: &quot;1. Buttons&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/save&quot;: {
+            &quot;created&quot;: &quot;20161108100434387&quot;,
+            &quot;text&quot;: &quot;! Save\n\n{{$:/core/ui/ControlPanel/Saving}}\n\n@@.BLUE ''Save''@@ {{$:/plugins/tongerner/ro/save-button}}\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/save&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20170507114800514&quot;,
+            &quot;caption&quot;: &quot;5. Save&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/sidebar-layout&quot;: {
+            &quot;created&quot;: &quot;20170307110734575&quot;,
+            &quot;text&quot;: &quot;\\define lingo-base() $:/language/ThemeTweaks/\n\nSidebar layout: &lt;$select tiddler=\&quot;$:/themes/tiddlywiki/vanilla/options/sidebarlayout\&quot;&gt;&lt;option value=\&quot;fixed-fluid\&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fixed-Fluid&gt;&gt;&lt;/option&gt;&lt;option value=\&quot;fluid-fixed\&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fluid-Fixed&gt;&gt;&lt;/option&gt;&lt;/$select&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/sidebar-layout&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20170307110812299&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/images/publish&quot;: {
+            &quot;created&quot;: &quot;20170322105731731&quot;,
+            &quot;text&quot;: &quot;&lt;svg width=\&quot;22\&quot; height=\&quot;22\&quot; viewBox=\&quot;0 0 486 438\&quot;&gt;\n&lt;style&gt;\n  .ro{\n    fill:none;\n    stroke-width:40;\n    stroke:#FF00FF;\n  }\n&lt;/style&gt;\n    &lt;path class=\&quot;ro\&quot; d=\&quot;m203.2 81.6l-141.6 0 0 311.7 313.3 0 0-139.5\&quot;/&gt;\n    &lt;path class=\&quot;ro\&quot; d=\&quot;m176.4 279.6l0-60 188-188 60.5 60.5 -189.5 189.5 -59 0\&quot;/&gt;\n    &lt;path class=\&quot;ro\&quot; d=\&quot;m326.9 69l61.1 61.1\&quot;/&gt;\n&lt;/svg&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/images/publish&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20170507151610262&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/publish-button&quot;: {
+            &quot;created&quot;: &quot;20170506162930803&quot;,
+            &quot;text&quot;: &quot;&lt;$button class=\&quot;tc-btn-invisible\&quot; tooltip=\&quot;Publish\&quot;&gt;\n&lt;$action-sendmessage $message=\&quot;tm-open-window\&quot; $param=\&quot;$:/plugins/tongerner/ro/publish\&quot; height=\&quot;700px\&quot; width=\&quot;500px\&quot;/&gt;\n{{$:/plugins/tongerner/ro/images/publish}}\n&lt;/$button&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/publish-button&quot;,
+            &quot;tags&quot;: &quot;$:/tags/publish-button $:/tags/TopRightBar&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20170507113741124&quot;,
+            &quot;list-before&quot;: &quot;$:/core/ui/TopBar/menu&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/sidebar-button-style&quot;: {
+            &quot;created&quot;: &quot;20140715185800387&quot;,
+            &quot;text&quot;: &quot;/* Hide sidebar button */\nsvg.tc-image-chevron-left {\n     display: none;\n}\n\nsvg.tc-image-chevron-right {\n     display: none;\n}\n&quot;,
+            &quot;type&quot;: &quot;text/css&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/sidebar-button-style&quot;,
+            &quot;tags&quot;: &quot;$:/tags/sidebar-button&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20170507113749411&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;
+        },
+        &quot;$:/plugins/tongerner/ro/advanced-search-button-style&quot;: {
+            &quot;created&quot;: &quot;20150519114003182&quot;,
+            &quot;text&quot;: &quot;/* Hide advanced search button */\n.tc-image-advanced-search-button.tc-image-button {\n     padding-left: 15px;\n}&quot;,
+            &quot;type&quot;: &quot;text/css&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tongerner/ro/advanced-search-button-style&quot;,
+            &quot;tags&quot;: &quot;$:/tags/advanced-search-button&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20170507130432946&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;
+        }
+    }
+}</pre>
+</div>
+<div created="20170506162930803" creator="TonGerner" list-before="$:/core/ui/TopBar/menu" modified="20170829190526137" modifier="TonGerner" tags="$:/tags/publish-button" title="$:/plugins/tongerner/ro/publish-button">
+<pre>&lt;$button class=&quot;tc-btn-invisible&quot; tooltip=&quot;Publish&quot;&gt;
+&lt;$action-sendmessage $message=&quot;tm-open-window&quot; $param=&quot;$:/plugins/tongerner/ro/publish&quot; height=&quot;700px&quot; width=&quot;500px&quot;/&gt;
+{{$:/plugins/tongerner/ro/images/publish}}
+&lt;/$button&gt;</pre>
+</div>
+<div created="20140715185800387" creator="TonGerner" modified="20170829190516777" modifier="TonGerner" tags="$:/tags/sidebar-button" title="$:/plugins/tongerner/ro/sidebar-button-style" type="text/css">
+<pre>/* Hide sidebar button */
+svg.tc-image-chevron-left {
+     display: none;
+}
+
+svg.tc-image-chevron-right {
+     display: none;
+}
+</pre>
 </div>
 <div created="20170825194853739" modified="20170825194859156" title="$:/SiteSubtitle">
 <pre>all the things you'll ever need</pre>
@@ -8401,11 +8693,14 @@ Error message and password prompt
 <div created="20170825195013231" modified="20170825195013231" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170825201924541" modified="20170825201926033" title="$:/state/sidebar">
+<div created="20170825201924541" modified="20170829190522152" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20170825201654183" modified="20170825205706584" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
+</div>
+<div created="20170829190437852" modified="20170829190534315" title="$:/state/tab--876492898">
+<pre>$:/plugins/tongerner/ro/save</pre>
 </div>
 <div created="20170825200600523" modified="20170825205420154" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
@@ -8413,8 +8708,11 @@ Error message and password prompt
 <div created="20170825200606057" modified="20170825200608775" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/TiddlySpot</pre>
 </div>
-<div created="20170825200235630" modified="20170825210623010" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20170825200235630" modified="20170829185502230" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/More</pre>
+</div>
+<div created="20170829190446613" modified="20170829190446613" title="$:/state/tabs/controlpanel/toolbars--1837375673">
+<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
 <div list="[[Welcome to ETPB wiki]] [[Getting Started]] Imaging Data" title="$:/StoryList">
 <pre></pre>
@@ -8432,7 +8730,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///Users/evansjw/Work/ETPB/webpage/etpb.bitbucket.io/ETPB_wiki.html&quot;
+            &quot;text&quot;: &quot;file:///Users/evansjw/Downloads/tiddlywiki.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -8452,7 +8750,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/Users/evansjw/Work/ETPB/webpage/etpb.bitbucket.io/ETPB_wiki.html&quot;
+            &quot;text&quot;: &quot;/Users/evansjw/Downloads/tiddlywiki.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -8718,9 +9016,7 @@ Error message and password prompt
 &lt;li&gt;close the terminal and start a new one, you're all set!&lt;/li&gt;</pre>
 </div>
 <div created="20170825205019921" modified="20170825210604507" tags="" title="Imaging">
-<pre>
-
-!! MRI
+<pre>!! MRI
 
 [[Neuroimaging links]]
 
@@ -8744,8 +9040,7 @@ Error message and password prompt
 </pre>
 </div>
 <div created="20170825201912013" modified="20170825202517284" tags="" title="Neuroimaging links" type="text/vnd.tiddlywiki">
-<pre>
-!!Local imaging resources:
+<pre>!!Local imaging resources:
 [[FMRIF|https://fmrif.nimh.nih.gov/]]
    scan/tech schedule,summer course videos
 
