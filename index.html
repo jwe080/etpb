@@ -206,6 +206,8 @@ Error message and password prompt
 
 <li>Imaging</li>
 
+<li>MRI directory data organization</li>
+
 <li>Neuroimaging links</li>
 
 <li>Training</li>
@@ -8708,7 +8710,7 @@ svg.tc-image-chevron-right {
 <div created="20170825195013231" modified="20170825195013231" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170825201924541" modified="20170829190522152" title="$:/state/sidebar">
+<div created="20170825201924541" modified="20170918203206048" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20170829191135582" modified="20170829191135582" title="$:/state/tab--1963855381">
@@ -8738,7 +8740,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[Welcome to ETPB wiki]] [[Getting Started]] [[Helix setup]] Imaging EEG-fMRI" title="$:/StoryList">
+<div list="[[MRI directory data organization]] [[Welcome to ETPB wiki]] [[Getting Started]] Imaging Data" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -9047,7 +9049,6 @@ svg.tc-image-chevron-right {
 </div>
 <div created="20170825205019921" modified="20170907191416482" tags="" title="Imaging">
 <pre>
-
 Upcoming Neuroimaging meetings:
 (1p 7SE meeting room)
 
@@ -9077,6 +9078,27 @@ Upcoming Neuroimaging meetings:
 * [[EEG-fMRI]]
 * MEG
 </pre>
+</div>
+<div author="Jen" created="20170918201635551" modified="20170918203157949" tags="" title="MRI directory data organization">
+<pre>In order to get things into BIDS format (eventually) we need to create a table of contents file (toc) that is a tab separated file (tsv).
+
+The file will:
+
+* live in the scan session's main directory 
+**e.g. subj-RISC000/mri/ses-20170917_7T/
+* be named using the convention:
+**sub-RISC000_ses-20170917_7T_toc.tsv
+* have the following columns
+**type, task, run, file (nii), phys, beh, comments 
+***type: anat,func,mrs
+***task: ETPB standard name of the task (e.g. rest, emoeval, iat)
+***run: (if applicable)e.g.1 for lone functional runs, then 2, 3, etc..
+***file: usually the nii file, but the *dat file for MRS data
+***phys: name of the BIOPAC file associate with the nii file (for func data)
+***beh: (optional)name of the *original* (unprocessed) behavioural file
+***comments: (optional) any comments about the run from the run sheet
+
+The name of the physiological file will need to be definitively looked up from the run sheet (hopefully someone wrote it down), otherwise, there are tricks to figure it out...</pre>
 </div>
 <div created="20170825201912013" modified="20170825202517284" tags="" title="Neuroimaging links" type="text/vnd.tiddlywiki">
 <pre>!!Local imaging resources:
