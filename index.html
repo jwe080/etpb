@@ -164,6 +164,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/Link/-270784093/search</li>
+
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
@@ -194,6 +196,8 @@ Error message and password prompt
 
 <li>$:/temp/search</li>
 
+<li>$:/theme</li>
+
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
@@ -205,6 +209,8 @@ Error message and password prompt
 <li>Helix setup</li>
 
 <li>Imaging</li>
+
+<li>MRI Data</li>
 
 <li>MRI directory data organization</li>
 
@@ -8518,11 +8524,10 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 &lt;/$set&gt;
 </pre>
 </div>
-<div created="20170825200625166" modified="20170825210328604" title="$:/DefaultTiddlers">
+<div created="20170825200625166" modified="20170918204612033" title="$:/DefaultTiddlers">
 <pre>'Welcome to ETPB wiki'
-'Getting Started'
 'Imaging'
-'Data'
+'MRI Data'
 
 </pre>
 </div>
@@ -8707,14 +8712,17 @@ svg.tc-image-chevron-right {
 <div created="20170825194850467" modified="20170825194851539" title="$:/SiteTitle">
 <pre>ETPB wiki</pre>
 </div>
+<div created="20170918203516474" modified="20170918203516945" title="$:/state/Link/-270784093/search">
+<pre>Data</pre>
+</div>
 <div created="20170825195013231" modified="20170825195013231" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20170825201924541" modified="20170918203206048" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20170829191135582" modified="20170829191135582" title="$:/state/tab--1963855381">
-<pre>$:/plugins/tongerner/ro/publish</pre>
+<div created="20170829191135582" modified="20170918204536136" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Theme</pre>
 </div>
 <div created="20170825201654183" modified="20170825205706584" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
@@ -8722,8 +8730,8 @@ svg.tc-image-chevron-right {
 <div created="20170829190437852" modified="20170829190534315" title="$:/state/tab--876492898">
 <pre>$:/plugins/tongerner/ro/save</pre>
 </div>
-<div created="20170825200600523" modified="20170829191120328" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20170825200600523" modified="20170918204547344" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20170825200606057" modified="20170825200608775" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/TiddlySpot</pre>
@@ -8731,7 +8739,7 @@ svg.tc-image-chevron-right {
 <div created="20170829191139183" modified="20170907184457911" title="$:/state/tab-96679383">
 <pre>$:/plugins/tongerner/ro/hide-toolbar-buttons</pre>
 </div>
-<div created="20170825200235630" modified="20170829190842155" title="$:/state/tab/sidebar--1835078512">
+<div created="20170825200235630" modified="20170918203317155" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20170829190446613" modified="20170829190446613" title="$:/state/tabs/controlpanel/toolbars--1837375673">
@@ -8740,7 +8748,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[MRI directory data organization]] [[Welcome to ETPB wiki]] [[Getting Started]] Imaging Data" title="$:/StoryList">
+<div list="$:/ControlPanel [[Welcome to ETPB wiki]] [[Getting Started]] Imaging [[MRI Data]] [[MRI directory data organization]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -8792,8 +8800,11 @@ svg.tc-image-chevron-right {
     }
 }</pre>
 </div>
-<div created="20170829191007476" modified="20170907184436407" title="$:/temp/search">
-<pre></pre>
+<div created="20170829191007476" modified="20170918203319406" title="$:/temp/search">
+<pre>data org</pre>
+</div>
+<div created="20170918204541508" modified="20170918204543096" title="$:/theme">
+<pre>$:/themes/tiddlywiki/snowwhite</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.14">
 <pre>{
@@ -9047,9 +9058,8 @@ svg.tc-image-chevron-right {
 &lt;/li&gt;
 &lt;li&gt;close the terminal and start a new one, you're all set!&lt;/li&gt;</pre>
 </div>
-<div created="20170825205019921" modified="20170907191416482" tags="" title="Imaging">
-<pre>
-Upcoming Neuroimaging meetings:
+<div created="20170825205019921" modified="20170918204435295" tags="" title="Imaging">
+<pre>Upcoming Neuroimaging meetings:
 (1p 7SE meeting room)
 
 21Sep17: Jess(G) -TBD
@@ -9057,15 +9067,24 @@ Upcoming Neuroimaging meetings:
 05Oct17:  Jen - MDMR and EFA
 
 ---
-!! MRI
-
-[[Neuroimaging links]]
 
 ---
 
-!! MEG
+!!Data procedures
+
+[[MRI Data]]
+
 
 ---
+
+!!Reference info
+
+[[MRI links]]
+
+[[MEG links]]
+
+---
+
 !!Study Stuff
 
 
@@ -9079,7 +9098,26 @@ Upcoming Neuroimaging meetings:
 * MEG
 </pre>
 </div>
-<div author="Jen" created="20170918201635551" modified="20170918203157949" tags="" title="MRI directory data organization">
+<div created="20170918203536892" modified="20170918204424259" title="MRI Data">
+<pre>Data is to be download from the scanner by the IRTA that was responsible for the scan within 24 hrs.
+
+The standard ETPB neuroimaging structure needs to be followed:
+
+subj-XXX000/mri/ses-20170917_7T/
+
+
+!!!!Download from: (NIH only) [[https://oxygen.nimh.nih.gov]]
+
+!!!![[MRI directory data organization]]
+
+!!!!QA &amp; preprocessing (coming soon...)
+motion
+physio
+behavioural regressors
+
+</pre>
+</div>
+<div author="Jen" created="20170918201635551" modified="20170918204100859" tags="" title="MRI directory data organization">
 <pre>In order to get things into BIDS format (eventually) we need to create a table of contents file (toc) that is a tab separated file (tsv).
 
 The file will:
