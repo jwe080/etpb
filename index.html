@@ -202,6 +202,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Draft of 'Welcome to ETPB wiki'</li>
+
 <li>EEG-fMRI</li>
 
 <li>Getting Started</li>
@@ -8739,8 +8741,8 @@ svg.tc-image-chevron-right {
 <div created="20170829191139183" modified="20170907184457911" title="$:/state/tab-96679383">
 <pre>$:/plugins/tongerner/ro/hide-toolbar-buttons</pre>
 </div>
-<div created="20170825200235630" modified="20170918203317155" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20170825200235630" modified="20170918212022755" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20170829190446613" modified="20170829190446613" title="$:/state/tabs/controlpanel/toolbars--1837375673">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
@@ -8748,7 +8750,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[Welcome to ETPB wiki]] Imaging [[MRI Data]] [[MRI directory data organization]]" title="$:/StoryList">
+<div list="[[MRI directory data organization]] [[Draft of 'Welcome to ETPB wiki']] [[Getting Started]] Imaging [[MRI Data]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -8915,6 +8917,11 @@ svg.tc-image-chevron-right {
     }
 }</pre>
 </div>
+<div created="20170825205921278" draft.of="Welcome to ETPB wiki" draft.title="Welcome to ETPB wiki" modified="20170918212029126" tags="" title="Draft of 'Welcome to ETPB wiki'">
+<pre>You may find useful stuff here.
+
+Try [[Getting Started]]</pre>
+</div>
 <div created="20170825204939585" modified="20170825204957110" tags="" title="EEG-fMRI" type="text/html">
 <pre>&lt;h1 id=&quot;markdown-header-egi-eeg-fmri-setup-cheat-sheet&quot;&gt;EGI EEG-fMRI setup cheat sheet&lt;/h1&gt;
 &lt;h6 id=&quot;markdown-header-originally-edited-by-kathleen-wills-10feb17&quot;&gt;originally edited by Kathleen Wills 10Feb17&lt;/h6&gt;
@@ -9058,7 +9065,7 @@ svg.tc-image-chevron-right {
 &lt;/li&gt;
 &lt;li&gt;close the terminal and start a new one, you're all set!&lt;/li&gt;</pre>
 </div>
-<div created="20170825205019921" modified="20170918204435295" tags="" title="Imaging">
+<div created="20170825205019921" modified="20170918212046809" tags="" title="Imaging">
 <pre>Upcoming Neuroimaging meetings:
 (1p 7SE meeting room)
 
@@ -9079,7 +9086,7 @@ svg.tc-image-chevron-right {
 
 !!Reference info
 
-[[MRI links]]
+[[MRI links|Neuroimaging links]]
 
 [[MEG links]]
 
@@ -9117,7 +9124,7 @@ behavioural regressors
 
 </pre>
 </div>
-<div author="Jen" created="20170918201635551" modified="20170918205055932" tags="" title="MRI directory data organization">
+<div author="Jen" created="20170918201635551" modified="20170918212101860" tags="" title="MRI directory data organization">
 <pre>In order to get things into [[BIDS|http://bids.neuroimaging.io]]
  [[format|http://bids.neuroimaging.io/bids_spec1.0.2.pdf]] (eventually) we need to create a table of contents file (toc) that is a tab separated file (tsv).
 
@@ -9128,7 +9135,7 @@ The file will:
 * be named using the convention:
 **sub-RISC000_ses-20170917_toc.tsv
 * have the following columns
-**type, task, run, file (nii), phys, beh, comments 
+**type, task, run, file, phys, beh, comments 
 ***type: anat,func,mrs
 ***task: ETPB standard name of the task (e.g. rest, emoeval, iat)
 ***run: (if applicable)e.g.1 for lone functional runs, then 2, 3, etc..
