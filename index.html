@@ -8717,7 +8717,7 @@ svg.tc-image-chevron-right {
 <div created="20170918203516474" modified="20170918203516945" title="$:/state/Link/-270784093/search">
 <pre>Data</pre>
 </div>
-<div created="20170825195013231" modified="20170825195013231" title="$:/state/showeditpreview">
+<div created="20170825195013231" modified="20170920170525781" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20170825201924541" modified="20170918203206048" title="$:/state/sidebar">
@@ -8750,7 +8750,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[MRI directory data organization]] [[Draft of 'Welcome to ETPB wiki']] [[Getting Started]] Imaging [[MRI Data]]" title="$:/StoryList">
+<div list="[[Helix setup]] [[Welcome to ETPB wiki]] Imaging [[MRI Data]] [[MRI directory data organization]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -9034,19 +9034,17 @@ Try [[Getting Started]]</pre>
 
 [[Helix setup]]</pre>
 </div>
-<div author="Jen" created="20170825200042600" modified="20170825201026280" tags="linux" title="Helix setup" type="text/html">
-<pre>&lt;h2&gt;&lt;strong&gt;Helix account setup:&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;Here is how to setup your helix account:&lt;/p&gt;
-&lt;p&gt;Requires:&lt;/p&gt;
-&lt;ul&gt;
+<div author="Jen" created="20170825200042600" modified="20170920170732191" tags="linux" title="Helix setup" type="text/vnd.tiddlywiki">
+<pre>!!Helix account setup:
+
+Here is how to setup your helix account:&lt;/p&gt;
+Requires:
+
 &lt;li&gt;NIH account&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://hpc.nih.gov/docs/accounts.html&quot;&gt;HPC account&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;NX client properly&amp;nbsp;&lt;a href=&quot;https://hpc.nih.gov/docs/connect.html&quot;&gt;setup&lt;/a&gt;
-&lt;ul&gt;
 &lt;li&gt;(under persistent connections NX)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+
 &lt;p&gt;Instructions:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;start NX&lt;/li&gt;
@@ -9058,8 +9056,8 @@ Try [[Getting Started]]</pre>
 &lt;/li&gt;
 &lt;li&gt;add the following lines to the end of the file
 &lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #888888;&quot;&gt;# Source ETPB definitions&lt;/span&gt;
-&lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;[&lt;/span&gt; -f /data/MoodGroup/IRTA/etpb_bashrc &lt;span style=&quot;color: #333333;&quot;&gt;]&lt;/span&gt;; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;then&lt;/span&gt;
-        . /data/MoodGroup/IRTA/etpb_bashrc
+&lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;[&lt;/span&gt; -f /data/MoodGroup/code/etpb_bashrc.sh &lt;span style=&quot;color: #333333;&quot;&gt;]&lt;/span&gt;; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;then&lt;/span&gt;
+        ./data/MoodGroup/code/etpb_bashrc.sh
 &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;fi&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/li&gt;
