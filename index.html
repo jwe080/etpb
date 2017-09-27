@@ -164,6 +164,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/image-picker/system--1365487189</li>
+
 <li>$:/state/Link/-270784093/search</li>
 
 <li>$:/state/showeditpreview</li>
@@ -215,6 +217,8 @@ Error message and password prompt
 <li>MRI Data</li>
 
 <li>MRI directory data organization</li>
+
+<li>MRS</li>
 
 <li>Neuroimaging links</li>
 
@@ -8714,10 +8718,13 @@ svg.tc-image-chevron-right {
 <div created="20170825194850467" modified="20170825194851539" title="$:/SiteTitle">
 <pre>ETPB wiki</pre>
 </div>
+<div created="20170927222511030" modified="20170927222512777" title="$:/state/image-picker/system--1365487189">
+<pre>hide</pre>
+</div>
 <div created="20170918203516474" modified="20170918203516945" title="$:/state/Link/-270784093/search">
 <pre>Data</pre>
 </div>
-<div created="20170825195013231" modified="20170920170525781" title="$:/state/showeditpreview">
+<div created="20170825195013231" modified="20170927225335465" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20170825201924541" modified="20170918203206048" title="$:/state/sidebar">
@@ -8750,7 +8757,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[Welcome to ETPB wiki]] [[Getting Started]] [[Helix setup]] Imaging [[MRI Data]]" title="$:/StoryList">
+<div list="MRS [[Welcome to ETPB wiki]] Imaging [[MRI Data]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -9152,6 +9159,93 @@ The file will:
 ***comments: (optional) any comments about the run from the run sheet
 
 The name of the physiological file will need to be definitively looked up from the run sheet (hopefully someone wrote it down), otherwise, there are tricks to figure it out...</pre>
+</div>
+<div created="20170927222415828" modified="20170927230810206" tags="" title="MRS" type="">
+<pre>!!! FASTMAP
+!!! 
+* setup FASTMAP sequence (move over &lt;&lt;)
+**place voxel in pgACC
+**scan
+*start SpectroPeek.exe (D:/LiAn/Software)
+''at baseline'': use ScreenHunter.exe (in D:/LiAn/Software) to take a picture of the voxel location in all views
+
+*Open the FASTMAP tab in SpectroPeek (when the scan has finished)
+**Retrieve Shim values (located at the top)
+**Apply Shim values (bottom)
+**Scan FASTMAP again, retrieve and apply shims until the shim value line has flattened.
+**Cancel extra FASTMAP and move it to the trash in the lower left 
+!!!PRESS
+!!!
+*setup PRESS sequence
+**copy voxel location from FASTMAP
+***(right-click previously run FASTMAP scan and select: “Copy Parameters” ”Measurement Parameters” )
+**scan
+
+* open the PRESS tab in SpectroPeek
+**Retrieve (located at the top left).
+**Set Frequency (located at the top right) 
+
+***//If setting the frequency ''fails'', run PRESS again but hit Scan instead of Apply
+***//Check the water linewidth on the press// software, if it is too high (&gt;15 hz), then you need to do the FASTMAP step again//
+**Cancel extra PRESS and move it to the trash in the lower left
+
+!!!B1 Profile
+!!!
+*setup B1 profile scan
+**copy voxel location from PRESS
+***(right-click previously run PRESS scan and select: “Copy Parameters” 
+**scan
+
+*open B1 profile tab in SpectroPeek
+**Retrieve (located at the top left)
+*adjust flip angle flip angle in B1 Profile scan until VOI is centered as close to 0 as possible (Go to Contrast tab (on very bottom of Sequence selection area)  
+**//Getting the voxel signal amplitude lower is preferable to getting it centered//
+*Record the predicted voltage (top right corner of the B1 tab) on the run sheet
+*Cancel extra B1 Profile and move it to the trash in the lower left 
+
+!!! Water supression (PRESS, again)
+!!!
+
+*Copy previously scanned PRESS sequence (drag down, or copy/paste)
+*Open sequence and go to the System tab (on very bottom of Sequence selection area)
+**Adjustments
+**Change Voltage
+***Enter Predicted Voltage from run sheet (under Ref. on bottom left)
+*scan
+
+*Go to PRESS tab in SpectroPeek
+**Retrieve (located at the top)
+**Set Frequency(located at the top right) 
+***//If setting the frequency ''fails'', run PRESS again but hit Scan instead of Apply
+***//Check the water linewidth on the press// software, if it is too high (&gt;15 hz), then you need to do the FASTMAP step again//
+
+*Look at a water suppressed spectrum
+** Sequence
+**Choose WS on SpecialAdjust drop down menu
+*Scan
+
+*Once PRESS has concluded, click on the PRESS tab in SpectroPeek 
+**Retrieve (located at the top). 
+
+**If looks good continue, otherwise change water scaling factors on Sequence Selection or up the averages retrieve data to check
+
+!!! Actual MRS (PRESS, yet again)
+!!!
+*Go to Options in Sequence Selection  double check the voltage adjustment
+
+*Go to Sequence in Sequence Selection Specialwater interleaved from the dropdown box
+*Go to ContrastAverages[Change the value from 2 to 136]
+¬	Tell patient that last scan will be 6 min.
+¬	Hit Apply for PRESS, should last ~6 minutes
+¬	Once PRESS has concluded, click on the PRESS tab in SpectroPeek and hit Retrieve (located at the top). DON’T FORGET TO DO THIS STEP TO SAVE
+o	If looks good, transfer data(see separate instructions) 
+
+
+
+
+
+
+</pre>
 </div>
 <div created="20170825201912013" modified="20170825202517284" tags="" title="Neuroimaging links" type="text/vnd.tiddlywiki">
 <pre>!!Local imaging resources:
