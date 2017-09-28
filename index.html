@@ -204,6 +204,8 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>7T (Siemens) setup for fMRI</li>
+
 <li>Draft of 'Welcome to ETPB wiki'</li>
 
 <li>EEG-fMRI</li>
@@ -8757,7 +8759,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="MRS [[Welcome to ETPB wiki]] Imaging [[MRI Data]]" title="$:/StoryList">
+<div list="[[7T (Siemens) setup for fMRI]] MRS [[Welcome to ETPB wiki]] Imaging [[MRI Data]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -8924,6 +8926,41 @@ svg.tc-image-chevron-right {
     }
 }</pre>
 </div>
+<div created="20170928172502443" modified="20170928174631699" tags="" title="7T (Siemens) setup for fMRI">
+<pre>* *clear shims*
+* scan localizer
+!!! Set transmitter voltage
+!!!
+* scan B1 map
+** get voltage for 90^^o^^ flip angle
+*** drag head image beside sequence name to image windows above
+*** find the voltage in the middle of the bottom line
+**adjust the transmit voltage for the scan
+***From top menu bar: Options/Adjustments/Transmitter
+!!!Anatomicals
+!!!
+* scan MPRAGE
+* scan PD
+
+
+!!! 3rd order shim set
+!!!
+* setup slices for first fMRI
+* adjust shim
+
+**(from top toolbar) Option/Adjustments/3D Shim
+**Load Tune-up (only first time),Measure, Calculate, Apply
+**Pull up the ShimSet window from the beginning of the scan
+**SetShims_3rd
+*The Measure-Calculate-Apply-Set(or MCAS) can be done twice, make sure you wait about 30 seconds after you “set” the first time to ensure the shim coefficients in 1st, 2nd, 3rd order are converging
+*Adjust  frequency, switch to frequency tab and press Go. 
+**You will may need to press Go one more time before the frequency value converges, and then Close the window.
+
+!!! Do fMRI scans
+!!!
+
+</pre>
+</div>
 <div created="20170825205921278" draft.of="Welcome to ETPB wiki" draft.title="Welcome to ETPB wiki" modified="20170918212029126" tags="" title="Draft of 'Welcome to ETPB wiki'">
 <pre>You may find useful stuff here.
 
@@ -9078,7 +9115,7 @@ Requires:
 &lt;/li&gt;
 &lt;li&gt;save the file, log out, log back in and you're all set!&lt;/li&gt;</pre>
 </div>
-<div created="20170825205019921" modified="20170921201815123" tags="" title="Imaging">
+<div created="20170825205019921" modified="20170928172422800" tags="" title="Imaging">
 <pre>Upcoming Neuroimaging meetings:
 (1p 7SE meeting room)
 
@@ -9111,7 +9148,7 @@ Requires:
 
 !!!RISC
 * fMRI tasks
-* MRS
+* [[MRS]]
 *MEG
 !!!RPD
 
@@ -9160,11 +9197,12 @@ The file will:
 
 The name of the physiological file will need to be definitively looked up from the run sheet (hopefully someone wrote it down), otherwise, there are tricks to figure it out...</pre>
 </div>
-<div created="20170927222415828" modified="20170928150006320" tags="" title="MRS" type="">
-<pre>!!! FASTMAP
+<div created="20170927222415828" modified="20170928172500054" tags="" title="MRS" type="">
+<pre>
+!!! FASTMAP
 !!! 
 * setup FASTMAP sequence (move over &lt;&lt;)
-**place voxel in pgACC
+**place voxel in pgACC (requires resliced 3D anatomical)
 **scan
 *start SpectroPeek.exe (D:/LiAn/Software)
 ''at baseline'': use ScreenHunter.exe (in D:/LiAn/Software) to take a picture of the voxel location in all views
