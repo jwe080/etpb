@@ -8809,8 +8809,8 @@ svg.tc-image-chevron-right {
     }
 }</pre>
 </div>
-<div created="20170829191007476" modified="20170918204658433" title="$:/temp/search">
-<pre></pre>
+<div created="20170829191007476" modified="20170927230921593" title="$:/temp/search">
+<pre>MRS</pre>
 </div>
 <div created="20170918204541508" modified="20170918204543096" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -9160,7 +9160,7 @@ The file will:
 
 The name of the physiological file will need to be definitively looked up from the run sheet (hopefully someone wrote it down), otherwise, there are tricks to figure it out...</pre>
 </div>
-<div created="20170927222415828" modified="20170927230810206" tags="" title="MRS" type="">
+<div created="20170927222415828" modified="20170928150006320" tags="" title="MRS" type="">
 <pre>!!! FASTMAP
 !!! 
 * setup FASTMAP sequence (move over &lt;&lt;)
@@ -9219,27 +9219,30 @@ The name of the physiological file will need to be definitively looked up from t
 ***//If setting the frequency ''fails'', run PRESS again but hit Scan instead of Apply
 ***//Check the water linewidth on the press// software, if it is too high (&gt;15 hz), then you need to do the FASTMAP step again//
 
-*Look at a water suppressed spectrum
-** Sequence
-**Choose WS on SpecialAdjust drop down menu
+!!!!Look at a water suppressed spectrum
+!!!!
+*On the PRESS Sequence tab select the Special tab
+*Change the sequence type from the drop down menu to Adjust WS
 *Scan
 
 *Once PRESS has concluded, click on the PRESS tab in SpectroPeek 
 **Retrieve (located at the top). 
 
-**If looks good continue, otherwise change water scaling factors on Sequence Selection or up the averages retrieve data to check
+**If looks good continue, otherwise change water scaling factors on Sequence/Special tab or up the averages (then retrieve data to check result)
 
 !!! Actual MRS (PRESS, yet again)
 !!!
-*Go to Options in Sequence Selection  double check the voltage adjustment
+*Check transmit voltage (System/Adjustments Tx Ref. V)
 
-*Go to Sequence in Sequence Selection Specialwater interleaved from the dropdown box
-*Go to ContrastAverages[Change the value from 2 to 136]
-¬	Tell patient that last scan will be 6 min.
-¬	Hit Apply for PRESS, should last ~6 minutes
-¬	Once PRESS has concluded, click on the PRESS tab in SpectroPeek and hit Retrieve (located at the top). DON’T FORGET TO DO THIS STEP TO SAVE
-o	If looks good, transfer data(see separate instructions) 
 
+*Change sequence type to Water interleaved (Sequence/Special/Sequence Type drop down menu)
+*Change number of averages to 136 (Contrast/Averages)
+
+*Tell patient that last scan will be 6 min.
+* scan PRESS, should last ~6 minutes
+*Once PRESS has concluded, get data 
+**click on the PRESS tab in SpectroPeek and hit Retrieve (located at the top). DON’T FORGET TO DO THIS STEP TO SAVE
+**If looks good, transfer data (data file is listed on the PRESS tab)
 
 
 
