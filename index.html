@@ -206,6 +206,8 @@ Error message and password prompt
 
 <li>7T (Siemens) setup for fMRI</li>
 
+<li>Behavioural Data QA</li>
+
 <li>Draft of 'Welcome to ETPB wiki'</li>
 
 <li>EEG-fMRI</li>
@@ -8759,7 +8761,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[7T (Siemens) setup for fMRI]] MRS [[Welcome to ETPB wiki]] Imaging [[MRI Data]]" title="$:/StoryList">
+<div list="[[Behavioural Data QA]] [[7T (Siemens) setup for fMRI]] [[Welcome to ETPB wiki]] [[Getting Started]] [[Helix setup]] Imaging EEG-fMRI [[MRI Data]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -8811,8 +8813,8 @@ svg.tc-image-chevron-right {
     }
 }</pre>
 </div>
-<div created="20170829191007476" modified="20170927230921593" title="$:/temp/search">
-<pre>MRS</pre>
+<div created="20170829191007476" modified="20171002120424966" title="$:/temp/search">
+<pre>7T </pre>
 </div>
 <div created="20170918204541508" modified="20170918204543096" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -8961,12 +8963,50 @@ svg.tc-image-chevron-right {
 
 </pre>
 </div>
+<div created="20171003193615828" modified="20171003195241059" tags="" title="Behavioural Data QA">
+<pre>
+Behavioural data recorded in during an fMRI scan usually needs to be converted to regressors or formats more suitable to analysis.  Procedures for each task are listed below.
+
+!!! IAT &amp; Emo Eval
+
+Use the excel.txt output from E-prime (may have to convert the eprime output file). 
+
+For IAT use '' iat_regs.py '' on this file.
+For Emo Eval use ''ee_regs.py''
+
+e.g.
+
+```
+python iat_regs.py FILENAME
+```
+
+The output should be many files that are regressors formatted for AFNI for each contrast of interest.
+
+The accuracy of the subject's response will be in the _qa.txt file in the first line in % followed by the keys pressed during the experiment.   
+
+After this first line, there are two columns of letters: the first is the correct response, the second is the subject's response.
+
+If the subject's accuracy is low:
+
+* check that the correct keys were pressed (i.e. the button box wasn't flipped around).
+* check that the subject didn't fall asleep (i.e. stopped pressing buttons for a while)
+
+```
+# 17.3 b g nan
+b g
+b g
+b g
+```
+
+!!!
+</pre>
+</div>
 <div created="20170825205921278" draft.of="Welcome to ETPB wiki" draft.title="Welcome to ETPB wiki" modified="20170918212029126" tags="" title="Draft of 'Welcome to ETPB wiki'">
 <pre>You may find useful stuff here.
 
 Try [[Getting Started]]</pre>
 </div>
-<div created="20170825204939585" modified="20170825204957110" tags="" title="EEG-fMRI" type="text/html">
+<div created="20170825204939585" modified="20171002220606777" tags="" title="EEG-fMRI" type="text/vnd.tiddlywiki">
 <pre>&lt;h1 id=&quot;markdown-header-egi-eeg-fmri-setup-cheat-sheet&quot;&gt;EGI EEG-fMRI setup cheat sheet&lt;/h1&gt;
 &lt;h6 id=&quot;markdown-header-originally-edited-by-kathleen-wills-10feb17&quot;&gt;originally edited by Kathleen Wills 10Feb17&lt;/h6&gt;
 &lt;p&gt;The day before, see if amp is charged by unplugging power cable and see if light flashes&lt;/p&gt;
@@ -9071,10 +9111,19 @@ Try [[Getting Started]]</pre>
 &lt;li&gt;Autoconfig, then BGYRT letters setting. Use the dial to scroll and click in to select&lt;/li&gt;
 &lt;/ul&gt;</pre>
 </div>
-<div created="20170825210141272" modified="20170920175259433" tags="" title="Getting Started">
+<div created="20170825210141272" modified="20170928175638071" tags="" title="Getting Started">
 <pre>Here are some things you'll need to do to get started:
 
 [[Training Check list (coming soon)]]
+
+!!! Imaging
+
+[[FMRIF links|https://fmrif.nimh.nih.gov/internal/docs]]
+
+* need basic safety training
+   ** 7T safety training (email Kenny)
+* universal precautions
+* CPR
 
 !!! Computer Stuff
 [[Helix setup]]
@@ -9086,7 +9135,7 @@ Try [[Getting Started]]</pre>
 * [[common bash commands|https://hpc.nih.gov/training/handouts/BashScripting_LinuxCommands.pdf]]
 [[NIH library online tutorials |https://nihlibrary.nih.gov/training/online-tutorials ]],you'll find some R data wrangling youtube lectures here</pre>
 </div>
-<div author="Jen" created="20170825200042600" modified="20170925173512062" tags="linux" title="Helix setup" type="text/vnd.tiddlywiki">
+<div author="Jen" created="20170825200042600" modified="20170928192852935" tags="linux" title="Helix setup" type="text/vnd.tiddlywiki">
 <pre>!!Helix account setup:
 
 Here is how to setup your helix account:&lt;/p&gt;
@@ -9100,10 +9149,10 @@ Requires:
 &lt;p&gt;Instructions:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;start NX&lt;/li&gt;
-&lt;li&gt;edit your .bashrc_profile file
+&lt;li&gt;edit your .bashrc file
 &lt;ul&gt;
 &lt;li&gt;open a terminal&lt;/li&gt;
-&lt;li&gt;type nano .bashrc_profile&lt;/li&gt;
+&lt;li&gt;type nano .bashrc&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;add the following lines to the end of the file
@@ -9115,16 +9164,18 @@ Requires:
 &lt;/li&gt;
 &lt;li&gt;save the file, log out, log back in and you're all set!&lt;/li&gt;</pre>
 </div>
-<div created="20170825205019921" modified="20170928172422800" tags="" title="Imaging">
+<div created="20170825205019921" modified="20171003195328410" tags="" title="Imaging">
 <pre>Upcoming Neuroimaging meetings:
 (1p 7SE meeting room)
 
 
-05Oct17:  Jen - MDMR and EFA
 
-19Oct17: Allsion - multimodal project
 
----
+19Oct17: Allison - multimodal project
+
+05Oct17:  Jen - fMRI in ETPB
+
+21Sep17: JessG - Airpuff MEG, &amp; DCM
 
 ---
 
@@ -9132,6 +9183,9 @@ Requires:
 
 [[MRI Data]]
 
+[[Behavioural Data QA]]
+
+[[Physio QA]]
 
 ---
 
@@ -9148,8 +9202,10 @@ Requires:
 
 !!!RISC
 * fMRI tasks
+*[[7T Setup|7T (Siemens) setup for FMRI]]
 * [[MRS]]
 *MEG
+
 !!!RPD
 
 * [[EEG-fMRI]]
@@ -9198,8 +9254,7 @@ The file will:
 The name of the physiological file will need to be definitively looked up from the run sheet (hopefully someone wrote it down), otherwise, there are tricks to figure it out...</pre>
 </div>
 <div created="20170927222415828" modified="20170928172500054" tags="" title="MRS" type="">
-<pre>
-!!! FASTMAP
+<pre>!!! FASTMAP
 !!! 
 * setup FASTMAP sequence (move over &lt;&lt;)
 **place voxel in pgACC (requires resliced 3D anatomical)
