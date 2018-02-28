@@ -206,6 +206,8 @@ Error message and password prompt
 
 <li>7T (Siemens) setup for fMRI</li>
 
+<li>7T scanning instructions</li>
+
 <li>Automagic Tech Requests</li>
 
 <li>Behavioural Data QA</li>
@@ -215,6 +217,8 @@ Error message and password prompt
 <li>Draft of 'Welcome to ETPB wiki'</li>
 
 <li>EEG-fMRI</li>
+
+<li>General Scan Instructions</li>
 
 <li>Getting Started</li>
 
@@ -231,6 +235,8 @@ Error message and password prompt
 <li>MRS</li>
 
 <li>Neuroimaging links</li>
+
+<li>RPD structural scans (3TD)</li>
 
 <li>Training</li>
 
@@ -8767,7 +8773,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[Welcome to ETPB wiki]] Imaging EEG-fMRI [[MRI Data]]" title="$:/StoryList">
+<div list="[[7T scanning instructions]] [[RPD structural scans (3TD)]] [[General Scan Instructions]] [[Welcome to ETPB wiki]] Imaging [[7T (Siemens) setup for fMRI]] MRS [[MRI Data]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -8967,6 +8973,13 @@ svg.tc-image-chevron-right {
 !!! Do fMRI scans
 !!!
 
+</pre>
+</div>
+<div created="20180228151942621" modified="20180228152405485" tags="" title="7T scanning instructions">
+<pre>*[[register patient|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/7T/howto.html#patient-registration]]
+*select the correct ETPB protocol to scan (region: User Protocols, exam: ETPB, program will be specific to the scan)
+*move all scans for the protocol over (from right window to left window)
+*[[run scans|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/7T/howto.html#scan-subject]]
 </pre>
 </div>
 <div created="20180112200041644" modified="20180112200444041" tags="" title="Automagic Tech Requests">
@@ -9170,6 +9183,25 @@ Try [[Getting Started]]</pre>
 &lt;li&gt;Autoconfig, then BGYRT letters setting. Use the dial to scroll and click in to select&lt;/li&gt;
 &lt;/ul&gt;</pre>
 </div>
+<div created="20180226170620274" modified="20180228151939136" tags="" title="General Scan Instructions">
+<pre>!!! Physiological Recordings:
+
+*set up BIOPAC for data recording [[(details and data transfer )|https://fmrif.nimh.nih.gov/internal/manual/stimulus/biopac.html#data-transfer]]
+*attach the respiratory belt and cardiac finger monitor
+
+
+!!! Task fMRI:
+
+* turn on projector
+* set up laptop
+** connect to projector
+** connect response/trigger USB cable
+* give subject response box
+
+
+
+</pre>
+</div>
 <div created="20170825210141272" modified="20171206205902886" tags="" title="Getting Started">
 <pre>Here are some things you'll need to do to get started:
 
@@ -9231,7 +9263,7 @@ Requires:
 &lt;/li&gt;
 &lt;li&gt;save the file, log out, log back in and you're all set!&lt;/li&gt;</pre>
 </div>
-<div created="20170825205019921" modified="20180112200834432" tags="" title="Imaging">
+<div created="20170825205019921" modified="20180226170615966" tags="" title="Imaging">
 <pre>[[Shared Imaging Calendar|Imaging Calendar]]
 
 Upcoming Neuroimaging meetings:
@@ -9456,6 +9488,31 @@ http://www.psychopy.org/
  
 !!! linux:
 (there are many)</pre>
+</div>
+<div created="20180228144834776" modified="20180228151737866" tags="" title="RPD structural scans (3TD)">
+<pre>* [[register patient|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/3TD/howto.html#patient-registration]]
+*select all scans from:
+**the [[clinical scans|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/3TD/howto.html#clinical-scans]]
+**the ETPB &quot;extra clinicals&quot; protocol (region: User exam: ETPB program:extra_clinicals)
+* tell subject that you are about to start (make sure they are ok)
+*start routine survey /localizer - highlight scan (click green check mark), scan should begin
+// localizer should display in window and the next scan should be highlighted//
+
+For each scan:
+
+*adjust the volume or slices to cover the brain, when done, tell subject that the scan will start (and any scan specific instructions), click the green check mark to scan
+ **for volumes (i.e square) left click and hold on center of box to move the box 
+**for slices (i.e. set of lines) 
+***left click (and hold while moving) on the very center of the set of slices to move them up and down
+***to rotate click and the left click (and hold while moving) off center (rotate arrows should appear)
+
+After each scan check on subject before setting up the next scan.
+
+//for EPI (fMRI) scans use the realtime viewing button to see that data is being acquired, right most icon column, 2nd icon down of brain in a window frame//
+
+// for volume data (most clinicals) the data should appear in the top panes when the scan completes//
+
+</pre>
 </div>
 <div created="20170825210230600" modified="20170825210245956" tags="" title="Training">
 <pre>There is lots of it</pre>
