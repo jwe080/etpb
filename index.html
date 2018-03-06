@@ -206,8 +206,6 @@ Error message and password prompt
 
 <li>7T (Siemens) setup for fMRI</li>
 
-<li>7T scanning instructions</li>
-
 <li>Automagic Tech Requests</li>
 
 <li>Behavioural Data QA</li>
@@ -8743,7 +8741,7 @@ svg.tc-image-chevron-right {
 <div created="20170825195013231" modified="20170927225335465" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170825201924541" modified="20170918203206048" title="$:/state/sidebar">
+<div created="20170825201924541" modified="20180306182024186" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20170829191135582" modified="20170918204536136" title="$:/state/tab--1963855381">
@@ -8773,7 +8771,7 @@ svg.tc-image-chevron-right {
 <div created="20170907184546684" modified="20170907184546684" title="$:/state/tabs/controlpanel/toolbars--2068282752">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="[[7T scanning instructions]] [[RPD structural scans (3TD)]] [[General Scan Instructions]] [[Welcome to ETPB wiki]] Imaging [[7T (Siemens) setup for fMRI]] MRS [[MRI Data]]" title="$:/StoryList">
+<div list="[[RPD structural scans (3TD)]] [[General Scan Instructions]] [[Welcome to ETPB wiki]] Imaging [[7T (Siemens) setup for fMRI]] MRS [[MRI Data]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20170829191008768" modified="20170907184436407" title="$:/temp/advancedsearch">
@@ -8940,9 +8938,15 @@ svg.tc-image-chevron-right {
     }
 }</pre>
 </div>
-<div created="20170928172502443" modified="20170928174631699" tags="" title="7T (Siemens) setup for fMRI">
-<pre>* *clear shims*
+<div created="20170928172502443" modified="20180306182019900" tags="" title="7T (Siemens) setup for fMRI">
+<pre>*[[register patient|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/7T/howto.html#patient-registration]]
+*select the correct ETPB protocol to scan (region: User Protocols, exam: ETPB, program will be specific to the scan)
+*move all scans for the protocol over (from right window to left window)
+*clear shims*
 * scan localizer
+*[[run scans|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/7T/howto.html#scan-subject]]
+
+
 !!! Set transmitter voltage
 !!!
 * scan B1 map
@@ -8973,13 +8977,6 @@ svg.tc-image-chevron-right {
 !!! Do fMRI scans
 !!!
 
-</pre>
-</div>
-<div created="20180228151942621" modified="20180228152405485" tags="" title="7T scanning instructions">
-<pre>*[[register patient|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/7T/howto.html#patient-registration]]
-*select the correct ETPB protocol to scan (region: User Protocols, exam: ETPB, program will be specific to the scan)
-*move all scans for the protocol over (from right window to left window)
-*[[run scans|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/7T/howto.html#scan-subject]]
 </pre>
 </div>
 <div created="20180112200041644" modified="20180112200444041" tags="" title="Automagic Tech Requests">
@@ -9263,7 +9260,7 @@ Requires:
 &lt;/li&gt;
 &lt;li&gt;save the file, log out, log back in and you're all set!&lt;/li&gt;</pre>
 </div>
-<div created="20170825205019921" modified="20180226170615966" tags="" title="Imaging">
+<div created="20170825205019921" modified="20180306181812030" tags="" title="Imaging">
 <pre>[[Shared Imaging Calendar|Imaging Calendar]]
 
 Upcoming Neuroimaging meetings:
@@ -9320,6 +9317,7 @@ __Past meetings__:
 
 !!!RPD
 
+*[[Structurals|RPD structural scans (3TD)]]
 * [[EEG-fMRI]]
 * MEG
 </pre>
@@ -9489,8 +9487,10 @@ http://www.psychopy.org/
 !!! linux:
 (there are many)</pre>
 </div>
-<div created="20180228144834776" modified="20180228151737866" tags="" title="RPD structural scans (3TD)">
-<pre>* [[register patient|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/3TD/howto.html#patient-registration]]
+<div created="20180228144834776" modified="20180306181748544" tags="" title="RPD structural scans (3TD)">
+<pre>[[current runsheet|https://etpb.bitbucket.io/scanning_docs/RPD/	RPD_struct_runsheet.docx]]
+
+* [[register patient|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/3TD/howto.html#patient-registration]]
 *select all scans from:
 **the [[clinical scans|https://fmrif.nimh.nih.gov/internal/manual/gettingStarted/scannerSpecificManuals/3TD/howto.html#clinical-scans]]
 **the ETPB &quot;extra clinicals&quot; protocol (region: User exam: ETPB program:extra_clinicals)
