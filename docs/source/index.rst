@@ -19,6 +19,18 @@ Getting Started
 There are lots of training and things to sign up for.
 :ref:`GettingStarted`
 
+Imaging Meetings
+================
+
+Neuroimaging meetings are held every other Thursday at 1p in the large 7SE meeting room.  The upcoming schedule can be found 
+`here <https://docs.google.com/spreadsheets/d/1hSX8JcOFA1O8kVS_uniI5mVf9O0CYan_39BvsPlBqMw/edit?usp=sharing]>`_
+
+
+Data Procedures
+===============
+
+
+
 
 Indices and tables
 ==================
