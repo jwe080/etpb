@@ -17,7 +17,7 @@ Getting Started
 ===============
 
 There are lots of training and things to sign up for.
-:ref:`GettingStarted`.
+:ref:`GettingStarted`
 
 
 Indices and tables
