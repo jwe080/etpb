@@ -10,7 +10,7 @@ Welcome to the lab!
 
 Here are some things you'll need to do to get started:
 
-#[[Training Check list (coming soon)]]
+.. [[Training Check list (coming soon)]]
 
 Imaging
 -------
@@ -31,8 +31,11 @@ Imaging
 * get an `NMRF DICOM account <https://foley.nmrf.nih.gov/accounts/seleAcctType.php>`_
 * get `access to the NMRF center <http://intranet.nmrf.nih.gov/centeraccess.html>`_
 
+Other useful links to the main imaging centers:
+
 `FMRIF <https://fmrif.nimh.nih.gov/internal/docs>`_
 `NMRF <http://intranet.nmrf.nih.gov/>`_
+
 
 Computer Stuff
 ==============
@@ -40,7 +43,7 @@ Computer Stuff
 Helix setup
 -----------
 
-`HPC training links <https://hpc.nih.gov/training/>_`, lots of stuff here but specifically:
+`HPC training links <https://hpc.nih.gov/training/>`_, lots of stuff here but specifically:
 
 * `bash scripting <https://hpc.nih.gov/training/handouts/BashScripting-15May2017.pdf>`_
 * `common bash commands <https://hpc.nih.gov/training/handouts/BashScripting_LinuxCommands.pdf>`_
