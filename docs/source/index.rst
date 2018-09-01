@@ -13,12 +13,16 @@ all the things you will ever need
    :maxdepth: 2
    :caption: Contents:
 
+Getting Started
+===============
+
+There are lots of training and things to sign up for.
+:ref:`GettingStarted`.
 
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`GettingStarted`
 * :ref:`modindex`
 * :ref:`search`
