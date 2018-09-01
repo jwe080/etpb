@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ETPB_imaging's documentation!
+Welcome to ETPB imaging's documentation!
 ========================================
 
 all the things you will ever need

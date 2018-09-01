@@ -1,4 +1,4 @@
-.._GettingStarted:
+.. _GettingStarted:
 
 
 Getting Started
