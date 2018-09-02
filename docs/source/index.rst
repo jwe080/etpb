@@ -30,23 +30,21 @@ Neuroimaging meetings are held every other Thursday at 1p in the large 7SE meeti
 `here <https://docs.google.com/spreadsheets/d/1hSX8JcOFA1O8kVS_uniI5mVf9O0CYan_39BvsPlBqMw/edit?usp=sharing]>`_
 
 
-Imaging Procedures
-==================
-
-* Scanning procedures
----------------------
-  * Automagic tech requests
-  * Protocol specific scanning instructions
-  * adding CRIS notes
-
-* Data procedures
------------------
-
 Userful Links
 =============
 
 Recent Publications
 ====================
+
+See all neuroimaging publications from the ETPB `here <https://www.ncbi.nlm.nih.gov/pubmed?term=experimental%20therapeutics%20and%20pathophysiology%20branch%20%5baffiliation%5d%20and%20(meg%20or%20fmri)>`_!
+
+Some recent work includes:
+
+2018
+""""
+* Glutamatergic signaling drives ketamine-mediated response in depression: evidence from dynamic causal modeling. (Gilbert et al.)
+* Default mode connectivity in major depressive disorder measured p to 10 days after ketamine administration. (Evans et al.)
+* Ketamine has distinct electrophysiological and behavioral effects in depressed and healthy subjects. (Nugent et al.)
 
 
 .. Indices and tables
