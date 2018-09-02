@@ -15,6 +15,7 @@ all the things you will ever need
 
    GettingStarted
    ImagingProcedures
+   TechRequests
 
 Getting Started
 ===============
