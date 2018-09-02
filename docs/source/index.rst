@@ -14,18 +14,10 @@ all the things you will ever need
    :caption: Contents:
 
 
-Here's the short list:
-
-* :ref:`Getting Started`
-* Meeting Calendar
-* Imaging Procedures
-* Training Opportunities
-* Publications
-
 Getting Started
 ===============
 
-There are lots of training and things to sign up for.
+New here?  There are lots of training and things to sign up for. Try
 :ref:`GettingStarted`
 
 Imaging Meetings
@@ -39,12 +31,19 @@ Imaging Procedures
 ==================
 
 * Scanning procedures
-
+---------------------
   * Automagic tech requests
   * Protocol specific scanning instructions
-  * CRIS note
+  * adding CRIS notes
 
 * Data procedures
+-----------------
+
+Userful Links
+=============
+
+Recent Publications
+====================
 
 
 .. Indices and tables
