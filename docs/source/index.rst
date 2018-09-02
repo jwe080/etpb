@@ -10,6 +10,7 @@ all the things you will ever need
 
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
    :caption: Contents:
 
