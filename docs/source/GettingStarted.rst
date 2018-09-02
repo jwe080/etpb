@@ -59,6 +59,7 @@ Further account setup instructions:
           gedit ~/.bashrc
 
 * add the following lines to the end of the file::
+
    # Source ETPB definitions
    if [ -f /data/MoodGroup/code/IRTA_setup/etpb_bashrc.sh ]; then
         source /data/MoodGroup/code/IRTA_setup/etpb_bashrc.sh
@@ -66,12 +67,14 @@ Further account setup instructions:
 
 save the file, terminate the NX session, log back in and you're all set!
 
+Helpful Links
+^^^^^^^^^^^^^
 
-`HPC training links <https://hpc.nih.gov/training/>`_, lots of stuff here but specifically:
+* `HPC training links <https://hpc.nih.gov/training/>`_, lots of stuff here but specifically:
 
-* `bash scripting <https://hpc.nih.gov/training/handouts/BashScripting-15May2017.pdf>`_
-* `common bash commands <https://hpc.nih.gov/training/handouts/BashScripting_LinuxCommands.pdf>`_
-`NIH library online tutorials <https://nihlibrary.nih.gov/training/online-tutorials>`_, you'll find some R data wrangling youtube lectures here
+  * `bash scripting <https://hpc.nih.gov/training/handouts/BashScripting-15May2017.pdf>`_
+  * `common bash commands <https://hpc.nih.gov/training/handouts/BashScripting_LinuxCommands.pdf>`_
 
+* `NIH library online tutorials <https://nihlibrary.nih.gov/training/online-tutorials>`_, you'll find some R data wrangling youtube lectures here
 * `Software carpentry <https://software-carpentry.org/lessons/previous/>`_
 
