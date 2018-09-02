@@ -13,6 +13,8 @@ all the things you will ever need
    :maxdepth: 2
    :caption: Contents:
 
+   GettingStarted
+   ImagingProcedures
 
 Getting Started
 ===============
