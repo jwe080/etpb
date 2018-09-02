@@ -38,10 +38,33 @@ Other useful links to the main imaging centers:
 
 
 Computer Stuff
-==============
+--------------
 
-Helix setup
------------
+HPC account setup
+^^^^^^^^^^^^^^^^^
+
+* get an NIH High-Performance Computing (HPC) account.  This does requrie an NIH account - you have one if you have an @nih.gov email.
+  * Request one `here <https://hpc.nih.gov/nih/accounts/account_request.php>`_
+
+* `setup <https://hpc.nih.gov/docs/connect.html>`_ NoMachine `(NX) <https://www.nomachine.com/download>`_ client on your computer
+  * look under persistent connections NX
+
+
+Further account setup instructions:
+
+* start NX
+* open your your .bashrc file for editing
+   * open a terminal `more details here <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-starting-xterm.html>`_
+     * type::
+          gedit ~/.bashrc
+* add the following lines to the end of the file::
+   # Source ETPB definitions
+   if [ -f /data/MoodGroup/code/IRTA_setup/etpb_bashrc.sh ]; then
+        source /data/MoodGroup/code/IRTA_setup/etpb_bashrc.sh
+   fi
+
+save the file, terminate the NX session, log back in and you're all set!
+
 
 `HPC training links <https://hpc.nih.gov/training/>`_, lots of stuff here but specifically:
 
