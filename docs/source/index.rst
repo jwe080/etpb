@@ -13,6 +13,15 @@ all the things you will ever need
    :maxdepth: 2
    :caption: Contents:
 
+
+Here's the short list:
+
+* :ref:`Getting Started`
+* Meeting Calendar
+* Imaging Procedures
+* Training Opportunities
+* Publications
+
 Getting Started
 ===============
 
@@ -26,15 +35,21 @@ Neuroimaging meetings are held every other Thursday at 1p in the large 7SE meeti
 `here <https://docs.google.com/spreadsheets/d/1hSX8JcOFA1O8kVS_uniI5mVf9O0CYan_39BvsPlBqMw/edit?usp=sharing]>`_
 
 
-Data Procedures
-===============
-
-
-
-
-Indices and tables
+Imaging Procedures
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+* Scanning procedures
+
+  * Automagic tech requests
+  * Protocol specific scanning instructions
+  * CRIS note
+
+* Data procedures
+
+
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
