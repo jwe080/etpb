@@ -6,7 +6,7 @@
 Welcome to ETPB imaging's documentation!
 ========================================
 
-all the things you will ever need
+*all the things you will ever need*
 
 
 .. toctree::
@@ -17,24 +17,19 @@ all the things you will ever need
    GettingStarted
    ImagingProcedures
 
-Getting Started
-===============
 
 New here?  There are lots of training and things to sign up for. Try
 :ref:`GettingStarted`
 
 Imaging Meetings
-================
+----------------
 
 Neuroimaging meetings are held every other Thursday at 1p in the large 7SE meeting room.  The upcoming schedule can be found 
 `here <https://docs.google.com/spreadsheets/d/1hSX8JcOFA1O8kVS_uniI5mVf9O0CYan_39BvsPlBqMw/edit?usp=sharing]>`_
 
 
-Userful Links
-=============
-
 Recent Publications
-====================
+-------------------
 
 See all neuroimaging publications from the ETPB `here <https://www.ncbi.nlm.nih.gov/pubmed?term=experimental%20therapeutics%20and%20pathophysiology%20branch%20%5baffiliation%5d%20and%20(meg%20or%20fmri)>`_!
 

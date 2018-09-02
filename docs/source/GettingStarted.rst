@@ -68,7 +68,7 @@ Further account setup instructions:
 save the file, terminate the NX session, log back in and you're all set!
 
 Helpful Links
-^^^^^^^^^^^^^
+-------------
 
 * `HPC training links <https://hpc.nih.gov/training/>`_, lots of stuff here but specifically:
 
