@@ -32,20 +32,19 @@ The basic order of things to do for a scan are:
 Automagic Tech Requests
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. role:: bash(code)
-   :language: bash
+.. code-block:: console
 
-Running and checking on the tech request script (on felix) :bash:
+Running and checking on the tech request script (on felix) ::
 
    python /data/MoodGroup/code/req_tech.py
 
 It should ask a bunch of questions (same as `this form <https://fmrif.nimh.nih.gov/techs_form>`_). It’s important to fill out the information correctly (format wise), particularly the dates (spacing, abbreviation) as the program uses it to figure out when to send the email.
 
-It should spit out a line giving you a job number and a send date/time. To check on the program type :bash:
+It should spit out a line giving you a job number and a send date/time. To check on the program type ::
 
    atq
 
-which will give you a list of the dates/times things will be sent or if you need to remove the email if the scan was cancelled :bash:
+which will give you a list of the dates/times things will be sent or if you need to remove the email if the scan was cancelled ::
 
    atrm THEJOBNUMBER
 
