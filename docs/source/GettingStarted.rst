@@ -61,7 +61,7 @@ Further account setup instructions:
           gedit ~/.bashrc
 
 * add the following lines to the end of the file
-.. code-block:: console
+.. code-block:: bash
 
    # Source ETPB definitions
    if [ -f /data/MoodGroup/code/IRTA_setup/etpb_bashrc.sh ]; then
