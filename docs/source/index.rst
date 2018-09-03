@@ -31,7 +31,7 @@ Neuroimaging meetings are held every other Thursday at 1p in the large 7SE meeti
 Recent Publications
 -------------------
 
-See all neuroimaging publications from the ETPB `here <https://www.ncbi.nlm.nih.gov/pubmed?term=experimental%20therapeutics%20and%20pathophysiology%20branch%20%5baffiliation%5d%20and%20(meg%20or%20fmri)>`_!
+See all neuroimaging publications from the ETPB `here <https://www.ncbi.nlm.nih.gov/pubmed?term=experimental%20therapeutics%20and%20pathophysiology%20branch%20%5baffiliation%5d%20and%20(meg%20or%20fmri%20or%20mrs)>`_!
 
 Some recent work includes:
 
