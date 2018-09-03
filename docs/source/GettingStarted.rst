@@ -55,11 +55,12 @@ Further account setup instructions:
 * start NX
 * open your your .bashrc file for editing
    * open a terminal `more details here <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Step_by_Step_Guide/s1-starting-xterm.html>`_
-     * type::
+     * type
+.. code-block:: console
           gedit ~/.bashrc
 
-* add the following lines to the end of the file::
-
+* add the following lines to the end of the file
+.. code-block:: console
    # Source ETPB definitions
    if [ -f /data/MoodGroup/code/IRTA_setup/etpb_bashrc.sh ]; then
         source /data/MoodGroup/code/IRTA_setup/etpb_bashrc.sh
